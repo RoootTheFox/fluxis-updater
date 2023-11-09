@@ -9,7 +9,7 @@ edition = "2021"
 anyhow = "1.0.72"
 thiserror = "1.0.44"
 clap = { version = "4.3.21", features = ["derive"] }
-zip = "0.6.6"
+zip = { version = "0.6.6", default-features = false, features = ["deflate", "bzip2"] } # not sure if we need bzip2, we can probably emit it for size too
 
 [profile.release]
 lto = true
